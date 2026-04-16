@@ -21,7 +21,22 @@ Where:
 
 ## Coefficients
 
-```text
 h = [1, 2, 2, 1]
 
-**## Features**
+## Features
+- 4-tap FIR filter in VHDL
+- Parrallel + multiplier + adder tree architecure
+- Delay-line registers for sample history
+- ROM stimulus using .mif file
+- ModelSim waveform verification
+- Quartus timeing and resource anaylsis
+- MATLAB output comparison
+
+## Status
+- MATLAB validation complete
+- FPGA hardware testing planned
+- Simulation/debug in progress
+- RTL design in progress
+
+## Notes
+- Timing analysis has some issues that are being worked on.
