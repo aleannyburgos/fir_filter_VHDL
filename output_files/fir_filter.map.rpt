@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fir_filter
-Fri Apr 17 17:11:43 2026
+Fri Apr 17 17:50:55 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -13,30 +13,34 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: LPM_FF:fir_signal_reg
- 11. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_0_reg
- 12. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_1_reg
- 13. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_2_reg
- 14. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn
- 15. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn1
- 16. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn2
- 17. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn3
- 18. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn_reg
- 19. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn1_reg
- 20. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn2_reg
- 21. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn3_reg
- 22. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n32
- 23. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n10
- 24. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n32_reg
- 25. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n10_reg
- 26. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder
- 27. Parameter Settings for User Entity Instance: LPM_FF:fir_result_reg
- 28. lpm_mult Parameter Settings by Entity Instance
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. General Register Statistics
+ 11. Source assignments for LPM_ROM:fir_rom|altrom:srom|altsyncram:rom_block|altsyncram_le01:auto_generated
+ 12. Parameter Settings for User Entity Instance: LPM_COUNTER:fir_counter
+ 13. Parameter Settings for User Entity Instance: LPM_ROM:fir_rom
+ 14. Parameter Settings for User Entity Instance: LPM_FF:fir_signal_reg
+ 15. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_0_reg
+ 16. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_1_reg
+ 17. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_2_reg
+ 18. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn
+ 19. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn1
+ 20. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn2
+ 21. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn3
+ 22. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn_reg
+ 23. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn1_reg
+ 24. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn2_reg
+ 25. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn3_reg
+ 26. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n32
+ 27. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n10
+ 28. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n32_reg
+ 29. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n10_reg
+ 30. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder
+ 31. Parameter Settings for User Entity Instance: LPM_FF:fir_result_reg
+ 32. lpm_mult Parameter Settings by Entity Instance
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -63,18 +67,18 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 17 17:11:43 2026           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 17 17:50:55 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; fir_filter                                      ;
 ; Top-level Entity Name              ; fir_filter                                      ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 144                                             ;
-;     Total combinational functions  ; 48                                              ;
-;     Dedicated logic registers      ; 144                                             ;
-; Total registers                    ; 144                                             ;
-; Total pins                         ; 26                                              ;
+; Total logic elements               ; 139                                             ;
+;     Total combinational functions  ; 51                                              ;
+;     Dedicated logic registers      ; 139                                             ;
+; Total registers                    ; 139                                             ;
+; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
+; Total memory bits                  ; 64                                              ;
 ; Embedded Multiplier 9-bit elements ; 4                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -183,27 +187,48 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; fir_filter.vhd                   ; yes             ; User VHDL File               ; C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd                  ;         ;
-; lpm_ff.tdf                       ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_ff.tdf              ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; aglobal251.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/aglobal251.inc          ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/multcore.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mult_aco.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/alean/OneDrive/Documents/Projects/fir/db/mult_aco.tdf                 ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_fje.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/alean/OneDrive/Documents/Projects/fir/db/add_sub_fje.tdf              ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
+; fir_filter.vhd                   ; yes             ; User VHDL File                   ; C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd                  ;         ;
+; fir_filter.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.mif                  ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; aglobal251.inc                   ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/aglobal251.inc          ;         ;
+; db/cntr_5ei.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/alean/OneDrive/Documents/Projects/fir/db/cntr_5ei.tdf                 ;         ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altrom.tdf                       ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altrom.tdf              ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/others/maxplus2/memmodes.inc          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altsyncram.inc          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_le01.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/alean/OneDrive/Documents/Projects/fir/db/altsyncram_le01.tdf          ;         ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_ff.tdf              ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; multcore.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mult_aco.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/alean/OneDrive/Documents/Projects/fir/db/mult_aco.tdf                 ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                     ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_fje.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/alean/OneDrive/Documents/Projects/fir/db/add_sub_fje.tdf              ;         ;
++----------------------------------+-----------------+----------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -211,56 +236,72 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 144         ;
+; Estimated Total logic elements              ; 139         ;
 ;                                             ;             ;
-; Total combinational functions               ; 48          ;
+; Total combinational functions               ; 51          ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 0           ;
 ;     -- 3 input functions                    ; 45          ;
-;     -- <=2 input functions                  ; 3           ;
+;     -- <=2 input functions                  ; 6           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 3           ;
-;     -- arithmetic mode                      ; 45          ;
+;     -- normal mode                          ; 4           ;
+;     -- arithmetic mode                      ; 47          ;
 ;                                             ;             ;
-; Total registers                             ; 144         ;
-;     -- Dedicated logic registers            ; 144         ;
+; Total registers                             ; 139         ;
+;     -- Dedicated logic registers            ; 139         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 26          ;
+; I/O pins                                    ; 18          ;
+; Total memory bits                           ; 64          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 4           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 144         ;
-; Total fan-out                               ; 651         ;
-; Average fan-out                             ; 2.58        ;
+; Maximum fan-out                             ; 147         ;
+; Total fan-out                               ; 665         ;
+; Average fan-out                             ; 2.75        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                 ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+-------------+--------------+
-; |fir_filter                     ; 48 (0)              ; 144 (32)                  ; 0           ; 4            ; 4       ; 0         ; 26   ; 0            ; |fir_filter                                               ; fir_filter  ; work         ;
-;    |lpm_ff:fir_adder_n10_reg|   ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_adder_n10_reg                      ; lpm_ff      ; work         ;
-;    |lpm_ff:fir_adder_n32_reg|   ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_adder_n32_reg                      ; lpm_ff      ; work         ;
-;    |lpm_ff:fir_mult_xn1_reg|    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn1_reg                       ; lpm_ff      ; work         ;
-;    |lpm_ff:fir_mult_xn2_reg|    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn2_reg                       ; lpm_ff      ; work         ;
-;    |lpm_ff:fir_mult_xn3_reg|    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn3_reg                       ; lpm_ff      ; work         ;
-;    |lpm_ff:fir_mult_xn_reg|     ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn_reg                        ; lpm_ff      ; work         ;
-;    |lpm_ff:fir_result_reg|      ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_result_reg                         ; lpm_ff      ; work         ;
-;    |lpm_mult:fir_mult_xn1|      ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn1                         ; lpm_mult    ; work         ;
-;       |mult_aco:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn1|mult_aco:auto_generated ; mult_aco    ; work         ;
-;    |lpm_mult:fir_mult_xn2|      ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn2                         ; lpm_mult    ; work         ;
-;       |mult_aco:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn2|mult_aco:auto_generated ; mult_aco    ; work         ;
-;    |lpm_mult:fir_mult_xn3|      ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn3                         ; lpm_mult    ; work         ;
-;       |mult_aco:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn3|mult_aco:auto_generated ; mult_aco    ; work         ;
-;    |lpm_mult:fir_mult_xn|       ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn                          ; lpm_mult    ; work         ;
-;       |mult_aco:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn|mult_aco:auto_generated  ; mult_aco    ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+-----------------+--------------+
+; |fir_filter                                  ; 51 (0)              ; 139 (24)                  ; 64          ; 4            ; 4       ; 0         ; 18   ; 0            ; |fir_filter                                                                                 ; fir_filter      ; work         ;
+;    |lpm_counter:fir_counter|                 ; 3 (0)               ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_counter:fir_counter                                                         ; lpm_counter     ; work         ;
+;       |cntr_5ei:auto_generated|              ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_counter:fir_counter|cntr_5ei:auto_generated                                 ; cntr_5ei        ; work         ;
+;    |lpm_ff:fir_adder_n10_reg|                ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_adder_n10_reg                                                        ; lpm_ff          ; work         ;
+;    |lpm_ff:fir_adder_n32_reg|                ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_adder_n32_reg                                                        ; lpm_ff          ; work         ;
+;    |lpm_ff:fir_mult_xn1_reg|                 ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn1_reg                                                         ; lpm_ff          ; work         ;
+;    |lpm_ff:fir_mult_xn2_reg|                 ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn2_reg                                                         ; lpm_ff          ; work         ;
+;    |lpm_ff:fir_mult_xn3_reg|                 ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn3_reg                                                         ; lpm_ff          ; work         ;
+;    |lpm_ff:fir_mult_xn_reg|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_mult_xn_reg                                                          ; lpm_ff          ; work         ;
+;    |lpm_ff:fir_result_reg|                   ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_ff:fir_result_reg                                                           ; lpm_ff          ; work         ;
+;    |lpm_mult:fir_mult_xn1|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn1                                                           ; lpm_mult        ; work         ;
+;       |mult_aco:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn1|mult_aco:auto_generated                                   ; mult_aco        ; work         ;
+;    |lpm_mult:fir_mult_xn2|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn2                                                           ; lpm_mult        ; work         ;
+;       |mult_aco:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn2|mult_aco:auto_generated                                   ; mult_aco        ; work         ;
+;    |lpm_mult:fir_mult_xn3|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn3                                                           ; lpm_mult        ; work         ;
+;       |mult_aco:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn3|mult_aco:auto_generated                                   ; mult_aco        ; work         ;
+;    |lpm_mult:fir_mult_xn|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn                                                            ; lpm_mult        ; work         ;
+;       |mult_aco:auto_generated|              ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |fir_filter|lpm_mult:fir_mult_xn|mult_aco:auto_generated                                    ; mult_aco        ; work         ;
+;    |lpm_rom:fir_rom|                         ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_rom:fir_rom                                                                 ; lpm_rom         ; work         ;
+;       |altrom:srom|                          ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_rom:fir_rom|altrom:srom                                                     ; altrom          ; work         ;
+;          |altsyncram:rom_block|              ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_rom:fir_rom|altrom:srom|altsyncram:rom_block                                ; altsyncram      ; work         ;
+;             |altsyncram_le01:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fir_filter|lpm_rom:fir_rom|altrom:srom|altsyncram:rom_block|altsyncram_le01:auto_generated ; altsyncram_le01 ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
+; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
+; lpm_rom:fir_rom|altrom:srom|altsyncram:rom_block|altsyncram_le01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8            ; 8            ; --           ; --           ; 64   ; fir_filter.mif ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
 
 
 +-----------------------------------------------------+
@@ -286,14 +327,70 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 144   ;
+; Total registers                              ; 139   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 136   ;
+; Number of registers using Asynchronous Clear ; 139   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_ROM:fir_rom|altrom:srom|altsyncram:rom_block|altsyncram_le01:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER:fir_counter ;
++------------------------+-------------------+-------------------------+
+; Parameter Name         ; Value             ; Type                    ;
++------------------------+-------------------+-------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE          ;
+; LPM_WIDTH              ; 3                 ; Signed Integer          ;
+; LPM_DIRECTION          ; DEFAULT           ; Untyped                 ;
+; LPM_MODULUS            ; 0                 ; Signed Integer          ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                 ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                 ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                 ;
+; DEVICE_FAMILY          ; Cyclone IV E      ; Untyped                 ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                 ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH      ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK      ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                 ;
+; LABWIDE_SCLR           ; ON                ; Untyped                 ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                 ;
+; CBXI_PARAMETER         ; cntr_5ei          ; Untyped                 ;
++------------------------+-------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_ROM:fir_rom ;
++------------------------+----------------+--------------------+
+; Parameter Name         ; Value          ; Type               ;
++------------------------+----------------+--------------------+
+; LPM_WIDTH              ; 8              ; Signed Integer     ;
+; LPM_WIDTHAD            ; 3              ; Signed Integer     ;
+; LPM_NUMWORDS           ; 0              ; Signed Integer     ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED     ; Untyped            ;
+; LPM_OUTDATA            ; REGISTERED     ; Untyped            ;
+; LPM_FILE               ; fir_filter.mif ; Untyped            ;
+; DEVICE_FAMILY          ; Cyclone IV E   ; Untyped            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE     ;
++------------------------+----------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------+
@@ -787,20 +884,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 26                          ;
-; cycloneiii_ff         ; 144                         ;
-;     CLR               ; 136                         ;
-;     ENA               ; 8                           ;
-; cycloneiii_lcell_comb ; 48                          ;
-;     arith             ; 45                          ;
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 139                         ;
+;     CLR               ; 139                         ;
+; cycloneiii_lcell_comb ; 51                          ;
+;     arith             ; 47                          ;
+;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 45                          ;
-;     normal            ; 3                           ;
+;     normal            ; 4                           ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 3                           ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
+; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.50                        ;
-; Average LUT depth     ; 0.97                        ;
+; Average LUT depth     ; 1.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -819,24 +918,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Apr 17 17:11:35 2026
+    Info: Processing started: Fri Apr 17 17:50:47 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fir_filter -c fir_filter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file fir_filter.vhd
-    Info (12022): Found design unit 1: fir_filter-structural File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 16
+    Info (12022): Found design unit 1: fir_filter-structural File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 15
     Info (12023): Found entity 1: fir_filter File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file fir_filter_tb.vhd
     Info (12022): Found design unit 1: fir_filter_tb-tb File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter_tb.vhd Line: 7
     Info (12023): Found entity 1: fir_filter_tb File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter_tb.vhd Line: 4
 Info (12127): Elaborating entity "fir_filter" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_signal_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
-Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_shift_0_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
-Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_shift_1_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
-Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_shift_2_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
-Info (12128): Elaborating entity "LPM_FF" for hierarchy "LPM_FF:fir_signal_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 58
-Info (12130): Elaborated megafunction instantiation "LPM_FF:fir_signal_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 58
-Info (12133): Instantiated megafunction "LPM_FF:fir_signal_reg" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 58
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(19): object "fir_signal_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(19): object "fir_shift_0_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(19): object "fir_shift_1_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(19): object "fir_shift_2_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 19
+Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:fir_counter" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 32
+Info (12130): Elaborated megafunction instantiation "LPM_COUNTER:fir_counter" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 32
+Info (12133): Instantiated megafunction "LPM_COUNTER:fir_counter" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 32
+    Info (12134): Parameter "LPM_WIDTH" = "3"
+    Info (12134): Parameter "LPM_MODULUS" = "0"
+    Info (12134): Parameter "LPM_DIRECTION" = "UNUSED"
+    Info (12134): Parameter "LPM_AVALUE" = "UNUSED"
+    Info (12134): Parameter "LPM_SVALUE" = "UNUSED"
+    Info (12134): Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info (12134): Parameter "LPM_PVALUE" = "UNUSED"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_5ei.tdf
+    Info (12023): Found entity 1: cntr_5ei File: C:/Users/alean/OneDrive/Documents/Projects/fir/db/cntr_5ei.tdf Line: 26
+Info (12128): Elaborating entity "cntr_5ei" for hierarchy "LPM_COUNTER:fir_counter|cntr_5ei:auto_generated" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "LPM_ROM:fir_rom" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 37
+Info (12130): Elaborated megafunction instantiation "LPM_ROM:fir_rom" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 37
+Info (12133): Instantiated megafunction "LPM_ROM:fir_rom" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 37
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_WIDTHAD" = "3"
+    Info (12134): Parameter "LPM_NUMWORDS" = "0"
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_OUTDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "fir_filter.mif"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_ROM"
+    Info (12134): Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12128): Elaborating entity "altrom" for hierarchy "LPM_ROM:fir_rom|altrom:srom" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:fir_rom|altrom:srom", which is child of megafunction instantiation "LPM_ROM:fir_rom" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_ROM:fir_rom|altrom:srom|altsyncram:rom_block" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:fir_rom|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "LPM_ROM:fir_rom" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_le01.tdf
+    Info (12023): Found entity 1: altsyncram_le01 File: C:/Users/alean/OneDrive/Documents/Projects/fir/db/altsyncram_le01.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_le01" for hierarchy "LPM_ROM:fir_rom|altrom:srom|altsyncram:rom_block|altsyncram_le01:auto_generated" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (5) in the Memory Initialization File "C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 37
+Info (12128): Elaborating entity "LPM_FF" for hierarchy "LPM_FF:fir_signal_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 56
+Info (12130): Elaborated megafunction instantiation "LPM_FF:fir_signal_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 56
+Info (12133): Instantiated megafunction "LPM_FF:fir_signal_reg" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 56
     Info (12134): Parameter "LPM_WIDTH" = "8"
     Info (12134): Parameter "LPM_AVALUE" = "UNUSED"
     Info (12134): Parameter "LPM_SVALUE" = "UNUSED"
@@ -844,9 +978,9 @@ Info (12133): Instantiated megafunction "LPM_FF:fir_signal_reg" with the followi
     Info (12134): Parameter "LPM_FFTYPE" = "DFF"
     Info (12134): Parameter "LPM_TYPE" = "LPM_FF"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 71
-Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 71
-Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 71
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 69
+Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 69
+Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 69
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -858,9 +992,9 @@ Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn" with the followin
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_aco.tdf
     Info (12023): Found entity 1: mult_aco File: C:/Users/alean/OneDrive/Documents/Projects/fir/db/mult_aco.tdf Line: 29
 Info (12128): Elaborating entity "mult_aco" for hierarchy "LPM_MULT:fir_mult_xn|mult_aco:auto_generated" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 74
-Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 74
-Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn1" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 74
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 72
+Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 72
+Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn1" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 72
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -869,9 +1003,9 @@ Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn1" with the followi
     Info (12134): Parameter "LPM_PIPELINE" = "0"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12128): Elaborating entity "LPM_FF" for hierarchy "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 85
-Info (12130): Elaborated megafunction instantiation "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 85
-Info (12133): Instantiated megafunction "LPM_FF:fir_mult_xn_reg" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 85
+Info (12128): Elaborating entity "LPM_FF" for hierarchy "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 83
+Info (12130): Elaborated megafunction instantiation "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 83
+Info (12133): Instantiated megafunction "LPM_FF:fir_mult_xn_reg" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 83
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_AVALUE" = "UNUSED"
     Info (12134): Parameter "LPM_SVALUE" = "UNUSED"
@@ -879,9 +1013,9 @@ Info (12133): Instantiated megafunction "LPM_FF:fir_mult_xn_reg" with the follow
     Info (12134): Parameter "LPM_FFTYPE" = "DFF"
     Info (12134): Parameter "LPM_TYPE" = "LPM_FF"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 99
-Info (12130): Elaborated megafunction instantiation "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 99
-Info (12133): Instantiated megafunction "LPM_ADD_SUB:fir_adder_n32" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 99
+Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 97
+Info (12130): Elaborated megafunction instantiation "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 97
+Info (12133): Instantiated megafunction "LPM_ADD_SUB:fir_adder_n32" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 97
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_DIRECTION" = "UNUSED"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
@@ -891,17 +1025,27 @@ Info (12133): Instantiated megafunction "LPM_ADD_SUB:fir_adder_n32" with the fol
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_fje.tdf
     Info (12023): Found entity 1: add_sub_fje File: C:/Users/alean/OneDrive/Documents/Projects/fir/db/add_sub_fje.tdf Line: 23
 Info (12128): Elaborating entity "add_sub_fje" for hierarchy "LPM_ADD_SUB:fir_adder_n32|add_sub_fje:auto_generated" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[7]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[6]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[5]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[4]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[3]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[2]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[1]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13049): Converted tri-state buffer "lpm_rom:fir_rom|otri[0]" feeding internal logic into a wire File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 174 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
+Info (21057): Implemented 169 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 144 logic cells
+    Info (21061): Implemented 139 logic cells
+    Info (21064): Implemented 8 RAM segments
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4919 megabytes
-    Info: Processing ended: Fri Apr 17 17:11:43 2026
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4938 megabytes
+    Info: Processing ended: Fri Apr 17 17:50:55 2026
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:16
 

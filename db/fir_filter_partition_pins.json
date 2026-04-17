@@ -74,38 +74,6 @@
 				{
 					"name" : "clear",
 					"strict" : false
-				},
-				{
-					"name" : "sigs[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sigs[1]",
-					"strict" : false
-				},
-				{
-					"name" : "sigs[2]",
-					"strict" : false
-				},
-				{
-					"name" : "sigs[3]",
-					"strict" : false
-				},
-				{
-					"name" : "sigs[4]",
-					"strict" : false
-				},
-				{
-					"name" : "sigs[5]",
-					"strict" : false
-				},
-				{
-					"name" : "sigs[6]",
-					"strict" : false
-				},
-				{
-					"name" : "sigs[7]",
-					"strict" : false
 				}
 			]
 		}

@@ -7,7 +7,6 @@ use lpm.lpm_components.all;
 
 entity fir_filter is
 port( clock, clear : in std_logic;
-		sigs : in std_logic_vector( 7 downto 0);
 		y : out std_logic_vector(15 downto 0)
 	);
 end fir_filter;
@@ -15,8 +14,8 @@ end fir_filter;
 
 architecture structural of fir_filter is 
 
-signal fir_counter_out :std_logic_vector(1 downto 0);
-signal fir_signal, fir_shift_0, fir_shift_1, fir_shift_2, fir_shift_3 : std_logic_vector(7 downto 0) := (others => '0'); --change to foor loop
+signal fir_counter_out :std_logic_vector(2 downto 0);
+signal fir_signal, fir_shift_0, fir_shift_1, fir_shift_2 : std_logic_vector(7 downto 0) := (others => '0'); --change to foor loop
 signal fir_signal_reg_out, fir_shift_0_reg_out, fir_shift_1_reg_out, fir_shift_2_reg_out: std_logic_vector(7 downto 0); --change to foor loop
 signal fir_mult_xn3_out, fir_mult_xn2_out, fir_mult_xn1_out, fir_mult_xn0_out : std_logic_vector(15 downto 0);
 signal fir_mult_xn3_reg_out, fir_mult_xn2_reg_out, fir_mult_xn1_reg_out, fir_mult_xn0_reg_out, fir_adder_n32_reg_out, fir_adder_n10_reg_out : std_logic_vector(15 downto 0);
@@ -30,14 +29,14 @@ constant h3 : std_logic_vector(7 downto 0) := "00000001";
 
 begin
 --RAM STUFF
---fir_counter : lpm_counter
---	generic map(LPM_WIDTH=>2)
---	port map(clock=>clock, aclr=>clear, q=>fir_counter_out);
---	
---	
---fir_rom : lpm_rom
---	generic map(LPM_WIDTH=>8, LPM_FILE=>"fir_filter.mif", LPM_WIDTHAD=>2)
---	port map(address=>fir_counter_out, q=>fir_signal, inclock=>clock, outclock=>clock);
+fir_counter : lpm_counter
+	generic map(LPM_WIDTH=>3)
+	port map(clock=>clock, aclr=>clear, q=>fir_counter_out);
+	
+	
+fir_rom : lpm_rom
+	generic map(LPM_WIDTH=>8, LPM_FILE=>"fir_filter.mif", LPM_WIDTHAD=>3)
+	port map(address=>fir_counter_out, q=>fir_signal, inclock=>clock, outclock=>clock);
 
 
 process(clock, clear)
@@ -47,7 +46,6 @@ begin
 		fir_shift_1 <= (others => '0');
 		fir_shift_2 <= (others => '0');
 	elsif rising_edge(clock) then
-		fir_signal <= sigs;
 		fir_shift_0 <= fir_signal;
 		fir_shift_1 <= fir_shift_0;
 		fir_shift_2 <= fir_shift_1;
