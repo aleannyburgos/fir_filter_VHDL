@@ -1,4 +1,4 @@
-**Notes**
+***Notes***
 To read these waveforms, its important to understand the signals so heres the two main signals:
 
 - **/fir_filter_tb/uut/y** is the output signals
