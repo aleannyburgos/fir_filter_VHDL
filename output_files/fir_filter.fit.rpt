@@ -1,5 +1,5 @@
 Fitter report for fir_filter
-Fri Apr 17 10:59:36 2026
+Fri Apr 17 17:11:57 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -69,7 +69,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 17 10:59:36 2026           ;
+; Fitter Status                      ; Successful - Fri Apr 17 17:11:57 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; fir_filter                                      ;
 ; Top-level Entity Name              ; fir_filter                                      ;
@@ -1828,14 +1828,14 @@ Info (176353): Automatically promoted node clock~input (placed in PIN J1 (CLK1, 
 Info (176353): Automatically promoted node clear~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node fir_signal[0] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
-        Info (176357): Destination node fir_signal[1] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
-        Info (176357): Destination node fir_signal[2] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
-        Info (176357): Destination node fir_signal[3] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
-        Info (176357): Destination node fir_signal[4] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
-        Info (176357): Destination node fir_signal[5] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
-        Info (176357): Destination node fir_signal[6] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
-        Info (176357): Destination node fir_signal[7] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 44
+        Info (176357): Destination node fir_signal[0] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
+        Info (176357): Destination node fir_signal[1] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
+        Info (176357): Destination node fir_signal[2] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
+        Info (176357): Destination node fir_signal[3] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
+        Info (176357): Destination node fir_signal[4] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
+        Info (176357): Destination node fir_signal[5] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
+        Info (176357): Destination node fir_signal[6] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
+        Info (176357): Destination node fir_signal[7] File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 45
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176218): Packed 24 registers into blocks of type Embedded multiplier block
@@ -1872,13 +1872,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/alean/OneDrive/Documents/Projects/fir/output_files/fir_filter.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6087 megabytes
-    Info: Processing ended: Fri Apr 17 10:59:36 2026
+    Info: Peak virtual memory: 6102 megabytes
+    Info: Processing ended: Fri Apr 17 17:11:57 2026
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +----------------------------+

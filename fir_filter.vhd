@@ -16,7 +16,8 @@ end fir_filter;
 architecture structural of fir_filter is 
 
 signal fir_counter_out :std_logic_vector(1 downto 0);
-signal fir_signal, fir_shift_0, fir_shift_1, fir_shift_2 : std_logic_vector(7 downto 0); --change to foor loop
+signal fir_signal, fir_shift_0, fir_shift_1, fir_shift_2, fir_shift_3 : std_logic_vector(7 downto 0) := (others => '0'); --change to foor loop
+signal fir_signal_reg_out, fir_shift_0_reg_out, fir_shift_1_reg_out, fir_shift_2_reg_out: std_logic_vector(7 downto 0); --change to foor loop
 signal fir_mult_xn3_out, fir_mult_xn2_out, fir_mult_xn1_out, fir_mult_xn0_out : std_logic_vector(15 downto 0);
 signal fir_mult_xn3_reg_out, fir_mult_xn2_reg_out, fir_mult_xn1_reg_out, fir_mult_xn0_reg_out, fir_adder_n32_reg_out, fir_adder_n10_reg_out : std_logic_vector(15 downto 0);
 signal fir_adder_n32_out, fir_adder_n10_out, fir_adder_out : std_logic_vector(15 downto 0);
@@ -50,8 +51,22 @@ begin
 		fir_shift_0 <= fir_signal;
 		fir_shift_1 <= fir_shift_0;
 		fir_shift_2 <= fir_shift_1;
+
 	end if;
 end process;
+
+fir_signal_reg : lpm_ff
+	generic map(LPM_WIDTH=>8)
+	port map(q=>fir_signal_reg_out, data=>fir_signal, aclr=>clear, clock=>clock);
+fir_shift_0_reg : lpm_ff
+	generic map(LPM_WIDTH=>8)
+	port map(q=>fir_shift_0_reg_out, data=>fir_shift_0, aclr=>clear, clock=>clock);
+fir_shift_1_reg : lpm_ff
+	generic map(LPM_WIDTH=>8)
+	port map(q=>fir_shift_1_reg_out, data=>fir_shift_1, aclr=>clear, clock=>clock);
+fir_shift_2_reg : lpm_ff
+	generic map(LPM_WIDTH=>8)
+	port map(q=>fir_shift_2_reg_out, data=>fir_shift_2, aclr=>clear, clock=>clock);
 	
 fir_mult_xn : lpm_mult
 	generic map(LPM_WIDTHA=>8,LPM_WIDTHB=>8,LPM_WIDTHP=>16)

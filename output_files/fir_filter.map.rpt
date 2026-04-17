@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fir_filter
-Fri Apr 17 10:59:22 2026
+Fri Apr 17 17:11:43 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -15,24 +15,28 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn
- 11. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn1
- 12. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn2
- 13. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn3
- 14. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn_reg
- 15. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn1_reg
- 16. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn2_reg
- 17. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn3_reg
- 18. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n32
- 19. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n10
- 20. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n32_reg
- 21. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n10_reg
- 22. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder
- 23. Parameter Settings for User Entity Instance: LPM_FF:fir_result_reg
- 24. lpm_mult Parameter Settings by Entity Instance
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: LPM_FF:fir_signal_reg
+ 11. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_0_reg
+ 12. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_1_reg
+ 13. Parameter Settings for User Entity Instance: LPM_FF:fir_shift_2_reg
+ 14. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn
+ 15. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn1
+ 16. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn2
+ 17. Parameter Settings for User Entity Instance: LPM_MULT:fir_mult_xn3
+ 18. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn_reg
+ 19. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn1_reg
+ 20. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn2_reg
+ 21. Parameter Settings for User Entity Instance: LPM_FF:fir_mult_xn3_reg
+ 22. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n32
+ 23. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder_n10
+ 24. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n32_reg
+ 25. Parameter Settings for User Entity Instance: LPM_FF:fir_adder_n10_reg
+ 26. Parameter Settings for User Entity Instance: LPM_ADD_SUB:fir_adder
+ 27. Parameter Settings for User Entity Instance: LPM_FF:fir_result_reg
+ 28. lpm_mult Parameter Settings by Entity Instance
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -59,7 +63,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 17 10:59:22 2026           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 17 17:11:43 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; fir_filter                                      ;
 ; Top-level Entity Name              ; fir_filter                                      ;
@@ -185,15 +189,15 @@ on the Quartus Prime software download page.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 ; fir_filter.vhd                   ; yes             ; User VHDL File               ; C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd                  ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_ff.tdf              ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
 ; aglobal251.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/aglobal251.inc          ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/multcore.inc            ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/bypassff.inc            ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altshift.inc            ;         ;
 ; db/mult_aco.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/alean/OneDrive/Documents/Projects/fir/db/mult_aco.tdf                 ;         ;
-; lpm_ff.tdf                       ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_ff.tdf              ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
 ; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
 ; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/addcore.inc             ;         ;
 ; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/look_add.inc            ;         ;
@@ -290,6 +294,82 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_FF:fir_signal_reg ;
++------------------------+--------------+----------------------------+
+; Parameter Name         ; Value        ; Type                       ;
++------------------------+--------------+----------------------------+
+; LPM_WIDTH              ; 8            ; Signed Integer             ;
+; LPM_AVALUE             ; UNUSED       ; Untyped                    ;
+; LPM_SVALUE             ; UNUSED       ; Untyped                    ;
+; LPM_FFTYPE             ; DFF          ; Untyped                    ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                    ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE             ;
++------------------------+--------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_FF:fir_shift_0_reg ;
++------------------------+--------------+-----------------------------+
+; Parameter Name         ; Value        ; Type                        ;
++------------------------+--------------+-----------------------------+
+; LPM_WIDTH              ; 8            ; Signed Integer              ;
+; LPM_AVALUE             ; UNUSED       ; Untyped                     ;
+; LPM_SVALUE             ; UNUSED       ; Untyped                     ;
+; LPM_FFTYPE             ; DFF          ; Untyped                     ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                     ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE              ;
++------------------------+--------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_FF:fir_shift_1_reg ;
++------------------------+--------------+-----------------------------+
+; Parameter Name         ; Value        ; Type                        ;
++------------------------+--------------+-----------------------------+
+; LPM_WIDTH              ; 8            ; Signed Integer              ;
+; LPM_AVALUE             ; UNUSED       ; Untyped                     ;
+; LPM_SVALUE             ; UNUSED       ; Untyped                     ;
+; LPM_FFTYPE             ; DFF          ; Untyped                     ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                     ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE              ;
++------------------------+--------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_FF:fir_shift_2_reg ;
++------------------------+--------------+-----------------------------+
+; Parameter Name         ; Value        ; Type                        ;
++------------------------+--------------+-----------------------------+
+; LPM_WIDTH              ; 8            ; Signed Integer              ;
+; LPM_AVALUE             ; UNUSED       ; Untyped                     ;
+; LPM_SVALUE             ; UNUSED       ; Untyped                     ;
+; LPM_FFTYPE             ; DFF          ; Untyped                     ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                     ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE              ;
++------------------------+--------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------+
@@ -739,7 +819,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Apr 17 10:59:14 2026
+    Info: Processing started: Fri Apr 17 17:11:35 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fir_filter -c fir_filter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -750,9 +830,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file fir_fil
     Info (12022): Found design unit 1: fir_filter_tb-tb File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter_tb.vhd Line: 7
     Info (12023): Found entity 1: fir_filter_tb File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter_tb.vhd Line: 4
 Info (12127): Elaborating entity "fir_filter" for the top level hierarchy
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 56
-Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 56
-Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_signal_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_shift_0_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_shift_1_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
+Warning (10036): Verilog HDL or VHDL warning at fir_filter.vhd(20): object "fir_shift_2_reg_out" assigned a value but never read File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 20
+Info (12128): Elaborating entity "LPM_FF" for hierarchy "LPM_FF:fir_signal_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 58
+Info (12130): Elaborated megafunction instantiation "LPM_FF:fir_signal_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 58
+Info (12133): Instantiated megafunction "LPM_FF:fir_signal_reg" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 58
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_AVALUE" = "UNUSED"
+    Info (12134): Parameter "LPM_SVALUE" = "UNUSED"
+    Info (12134): Parameter "LPM_PVALUE" = "UNUSED"
+    Info (12134): Parameter "LPM_FFTYPE" = "DFF"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_FF"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 71
+Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 71
+Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 71
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -764,9 +858,9 @@ Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn" with the followin
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_aco.tdf
     Info (12023): Found entity 1: mult_aco File: C:/Users/alean/OneDrive/Documents/Projects/fir/db/mult_aco.tdf Line: 29
 Info (12128): Elaborating entity "mult_aco" for hierarchy "LPM_MULT:fir_mult_xn|mult_aco:auto_generated" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 377
-Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 59
-Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn1" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 59
+Info (12128): Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "LPM_MULT:fir_mult_xn1" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 74
+Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn1" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 74
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -775,9 +869,9 @@ Info (12133): Instantiated megafunction "LPM_MULT:fir_mult_xn1" with the followi
     Info (12134): Parameter "LPM_PIPELINE" = "0"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MULT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12128): Elaborating entity "LPM_FF" for hierarchy "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 70
-Info (12130): Elaborated megafunction instantiation "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 70
-Info (12133): Instantiated megafunction "LPM_FF:fir_mult_xn_reg" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 70
+Info (12128): Elaborating entity "LPM_FF" for hierarchy "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 85
+Info (12130): Elaborated megafunction instantiation "LPM_FF:fir_mult_xn_reg" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 85
+Info (12133): Instantiated megafunction "LPM_FF:fir_mult_xn_reg" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 85
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_AVALUE" = "UNUSED"
     Info (12134): Parameter "LPM_SVALUE" = "UNUSED"
@@ -785,9 +879,9 @@ Info (12133): Instantiated megafunction "LPM_FF:fir_mult_xn_reg" with the follow
     Info (12134): Parameter "LPM_FFTYPE" = "DFF"
     Info (12134): Parameter "LPM_TYPE" = "LPM_FF"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 84
-Info (12133): Instantiated megafunction "LPM_ADD_SUB:fir_adder_n32" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 84
+Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 99
+Info (12130): Elaborated megafunction instantiation "LPM_ADD_SUB:fir_adder_n32" File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 99
+Info (12133): Instantiated megafunction "LPM_ADD_SUB:fir_adder_n32" with the following parameter: File: C:/Users/alean/OneDrive/Documents/Projects/fir/fir_filter.vhd Line: 99
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_DIRECTION" = "UNUSED"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
@@ -805,9 +899,9 @@ Info (21057): Implemented 174 device resources after synthesis - the final resou
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 144 logic cells
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4936 megabytes
-    Info: Processing ended: Fri Apr 17 10:59:22 2026
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4919 megabytes
+    Info: Processing ended: Fri Apr 17 17:11:43 2026
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:16
 

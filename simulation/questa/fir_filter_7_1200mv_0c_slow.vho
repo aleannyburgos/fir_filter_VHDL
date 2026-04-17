@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition"
 
--- DATE "04/17/2026 10:59:43"
+-- DATE "04/17/2026 17:12:04"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -82,7 +82,7 @@ ENTITY 	fir_filter IS
 	clock : IN std_logic;
 	clear : IN std_logic;
 	sigs : IN std_logic_vector(7 DOWNTO 0);
-	y : BUFFER std_logic_vector(15 DOWNTO 0)
+	y : OUT std_logic_vector(15 DOWNTO 0)
 	);
 END fir_filter;
 
@@ -397,8 +397,8 @@ SIGNAL \fir_mult_xn1_reg|dffs\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \fir_mult_xn3_reg|dffs\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \fir_mult_xn2_reg|dffs\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL fir_signal : std_logic_vector(7 DOWNTO 0);
-SIGNAL \ALT_INV_clear~input_o\ : std_logic;
 SIGNAL \ALT_INV_clear~inputclkctrl_outclk\ : std_logic;
+SIGNAL \ALT_INV_clear~input_o\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -610,8 +610,8 @@ ww_devpor <= devpor;
 \clear~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clear~input_o\);
 
 \clock~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clock~input_o\);
-\ALT_INV_clear~input_o\ <= NOT \clear~input_o\;
 \ALT_INV_clear~inputclkctrl_outclk\ <= NOT \clear~inputclkctrl_outclk\;
+\ALT_INV_clear~input_o\ <= NOT \clear~input_o\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
