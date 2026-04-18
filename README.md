@@ -34,6 +34,7 @@ h = [1, 2, 2, 1]
 
 ## Architecture
 ![FIR Architecture](fir_filter_block_diagram.png)
+Counter → ROM → Shift Registers → 4 Multipliers → Adder Tree → Output Register
 
 ## Design Decisions
 Throughout the implementation of the filter there were some different approaches that were thought of.
