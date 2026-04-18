@@ -35,8 +35,8 @@ h = [1, 2, 2, 1]
 ## Status
 - MATLAB validation complete
 - FPGA hardware testing planned
-- Simulation/debug in progress
-- RTL design in progress
+- Simulation/debug complete
+- RTL design complete
 
 ## Notes
-- Timing analysis has some issues that are being worked on.
+
