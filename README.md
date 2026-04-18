@@ -33,7 +33,7 @@ h = [1, 2, 2, 1]
 - MATLAB output comparison
 
 ## Architecture
-![FIR Architecture](fir_filter_Block_Diagram.png)
+![FIR Architecture](fir_filter_block_diagram.png)
 
 ## Design Decisions
 Throughout the implementation of the filter there were some different approaches that were thought of.
