@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri Apr 17 17:51:06 2026
+Fitter Status : Successful - Fri Apr 17 23:08:48 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : fir_filter
 Top-level Entity Name : fir_filter
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 67 / 114,480 ( < 1 % )
+Total logic elements : 75 / 114,480 ( < 1 % )
     Total combinational functions : 51 / 114,480 ( < 1 % )
-    Dedicated logic registers : 67 / 114,480 ( < 1 % )
-Total registers : 67
+    Dedicated logic registers : 75 / 114,480 ( < 1 % )
+Total registers : 75
 Total pins : 18 / 529 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 64 / 3,981,312 ( < 1 % )

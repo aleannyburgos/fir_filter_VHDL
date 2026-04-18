@@ -73,22 +73,22 @@ clear => LPM_FF:fir_mult_xn3_reg.ACLR
 clear => LPM_FF:fir_adder_n32_reg.ACLR
 clear => LPM_FF:fir_adder_n10_reg.ACLR
 clear => LPM_FF:fir_result_reg.ACLR
-y[0] <= LPM_FF:fir_result_reg.Q[0]
-y[1] <= LPM_FF:fir_result_reg.Q[1]
-y[2] <= LPM_FF:fir_result_reg.Q[2]
-y[3] <= LPM_FF:fir_result_reg.Q[3]
-y[4] <= LPM_FF:fir_result_reg.Q[4]
-y[5] <= LPM_FF:fir_result_reg.Q[5]
-y[6] <= LPM_FF:fir_result_reg.Q[6]
-y[7] <= LPM_FF:fir_result_reg.Q[7]
-y[8] <= LPM_FF:fir_result_reg.Q[8]
-y[9] <= LPM_FF:fir_result_reg.Q[9]
-y[10] <= LPM_FF:fir_result_reg.Q[10]
-y[11] <= LPM_FF:fir_result_reg.Q[11]
-y[12] <= LPM_FF:fir_result_reg.Q[12]
-y[13] <= LPM_FF:fir_result_reg.Q[13]
-y[14] <= LPM_FF:fir_result_reg.Q[14]
-y[15] <= LPM_FF:fir_result_reg.Q[15]
+y[0] << LPM_FF:fir_result_reg.Q[0]
+y[1] << LPM_FF:fir_result_reg.Q[1]
+y[2] << LPM_FF:fir_result_reg.Q[2]
+y[3] << LPM_FF:fir_result_reg.Q[3]
+y[4] << LPM_FF:fir_result_reg.Q[4]
+y[5] << LPM_FF:fir_result_reg.Q[5]
+y[6] << LPM_FF:fir_result_reg.Q[6]
+y[7] << LPM_FF:fir_result_reg.Q[7]
+y[8] << LPM_FF:fir_result_reg.Q[8]
+y[9] << LPM_FF:fir_result_reg.Q[9]
+y[10] << LPM_FF:fir_result_reg.Q[10]
+y[11] << LPM_FF:fir_result_reg.Q[11]
+y[12] << LPM_FF:fir_result_reg.Q[12]
+y[13] << LPM_FF:fir_result_reg.Q[13]
+y[14] << LPM_FF:fir_result_reg.Q[14]
+y[15] << LPM_FF:fir_result_reg.Q[15]
 
 
 |fir_filter|LPM_COUNTER:fir_counter
@@ -306,14 +306,14 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |fir_filter|LPM_FF:fir_shift_0_reg
@@ -347,14 +347,14 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |fir_filter|LPM_FF:fir_shift_1_reg
@@ -388,14 +388,14 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |fir_filter|LPM_FF:fir_shift_2_reg
@@ -429,14 +429,14 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
-q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |fir_filter|LPM_MULT:fir_mult_xn

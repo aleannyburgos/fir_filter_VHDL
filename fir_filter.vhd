@@ -68,16 +68,16 @@ fir_shift_2_reg : lpm_ff
 	
 fir_mult_xn : lpm_mult
 	generic map(LPM_WIDTHA=>8,LPM_WIDTHB=>8,LPM_WIDTHP=>16)
-	port map(dataa=>fir_signal, datab=>h0, result=> fir_mult_xn0_out);
+	port map(dataa=>fir_signal_reg_out, datab=>h0, result=> fir_mult_xn0_out);
 fir_mult_xn1 : lpm_mult
 	generic map(LPM_WIDTHA=>8,LPM_WIDTHB=>8,LPM_WIDTHP=>16)
-	port map(dataa=>fir_shift_0, datab=>h1, result=> fir_mult_xn1_out);
+	port map(dataa=>fir_shift_0_reg_out, datab=>h1, result=> fir_mult_xn1_out);
 fir_mult_xn2 : lpm_mult
 	generic map(LPM_WIDTHA=>8,LPM_WIDTHB=>8,LPM_WIDTHP=>16)
-	port map(dataa=>fir_shift_1, datab=>h2, result=> fir_mult_xn2_out);
+	port map(dataa=>fir_shift_1_reg_out, datab=>h2, result=> fir_mult_xn2_out);
 fir_mult_xn3 : lpm_mult
 	generic map(LPM_WIDTHA=>8,LPM_WIDTHB=>8,LPM_WIDTHP=>16)
-	port map(dataa=>fir_shift_2, datab=>h3, result=> fir_mult_xn3_out);
+	port map(dataa=>fir_shift_2_reg_out, datab=>h3, result=> fir_mult_xn3_out);
 	
 	
 fir_mult_xn_reg : lpm_ff
